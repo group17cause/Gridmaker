@@ -44,4 +44,18 @@ function removeR(){
     
 }
 
+function removeC(){
+    let list = document.querySelectorAll("tr");
+    if(list.length > 0){
+        for(let i = 0; i < list.length; i++){
+            let count = list[i].querySelectorAll("td").length-1;
+            list[i].querySelectorAll("td")[count].remove();
+        }
+        if(list[0].childElementCount == 0){
+            for(let i = 0; i < list.length; i++){
+                list[i].remove();
+            }
+        } 
+    }
+}
 
