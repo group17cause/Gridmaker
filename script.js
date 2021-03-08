@@ -18,3 +18,22 @@ function addR(){
     }
 }
 
+function addC(){
+    let list = document.querySelectorAll("tr");
+    if(list.length === 0){
+        let row = document.createElement("TR");
+        let column = document.createElement("TD");
+        row.appendChild(column);
+        document.querySelector("table").appendChild(row);
+    }
+    else{
+        let count = list.length;
+
+        for(let i = 0; i < count ; i++){
+            let column = document.createElement("TD");
+            document.querySelectorAll("tr")[i].appendChild(column);
+        }
+    }
+}
+
+
