@@ -80,12 +80,8 @@ function selected()
 
 }
 
-//delete the entire grid
+//remove all color from the grid
 function clearAll()
 {
-	var grid = document.getElementById("grid");
-	for(let i = grid.rows.length; i > 0; i--)
-	{
-		grid.deleteRow(i -1);
-	}
+
 }
