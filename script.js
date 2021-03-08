@@ -59,3 +59,33 @@ function removeC(){
     }
 }
 
+//fill uncolored grid elements with selected color
+function fillU()
+{
+
+
+}
+
+//fill all grid elements with selected color
+function fill()
+{
+
+}
+
+//sets global variable for selected color
+function selected()
+{
+	colorSelected = document.getElementById("selectedID").value;
+	console.log(colorSelected);
+
+}
+
+//delete the entire grid
+function clearAll()
+{
+	var grid = document.getElementById("grid");
+	for(let i = grid.rows.length; i > 0; i--)
+	{
+		grid.deleteRow(i -1);
+	}
+}
