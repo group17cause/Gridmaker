@@ -36,4 +36,12 @@ function addC(){
     }
 }
 
+function removeR(){
+    let list = document.querySelectorAll("tr");
+    if(list.length > 0){
+        list[list.length-1].remove();
+    }
+    
+}
+
 
