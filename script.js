@@ -7,7 +7,7 @@ function addR(){
         row.appendChild(column);
         document.querySelector("table").appendChild(row);
     }
-    else{
+    else{ 
         let count = document.querySelector("tr").childElementCount;
         let row = document.createElement("tr");
         for(let i = 0; i <count; i++){
@@ -64,18 +64,17 @@ function changeBackgroundColor() {
   let color = document.getElementById('selectedID').value;
   this.style.backgroundColor = color;
 }
-
 //fill uncolored grid elements with selected color
-function fillU()
-{
-
-
+function fillU() {
 }
 
 //fill all grid elements with selected color
-function fill()
-{
-
+function fill() {
+    let cells = document.querySelectorAll("td");
+    let color = document.getElementById('selectedID').value;
+    for (let i = 0; i < cells.length; i++) {
+      cells[i].style.backgroundColor = color;
+    }
 }
 
 //remove all color from the grid
