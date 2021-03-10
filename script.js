@@ -30,7 +30,6 @@ function addC(){
     }
     else{
         let count = list.length;
-
         for(let i = 0; i < count ; i++){
             let column = document.createElement("TD");
             column.addEventListener("click", changeBackgroundColor);
@@ -44,7 +43,6 @@ function removeR(){
     if(list.length > 0){
         list[list.length-1].remove();
     }
-    
 }
 
 function removeC(){
@@ -62,7 +60,7 @@ function removeC(){
     }
 }
 
-function changeBackgroundColor () {
+function changeBackgroundColor() {
   let color = document.getElementById('selectedID').value;
   this.style.backgroundColor = color;
 }
