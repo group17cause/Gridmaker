@@ -3,15 +3,18 @@ function addR(){
     if(list.length === 0){
         let row = document.createElement("TR");
         let column = document.createElement("TD");
+        row.addEventListener("click", changeBackgroundColor);
+        // column.addEventListener("click", changeBackgroundColor);
         row.appendChild(column);
         document.querySelector("table").appendChild(row);
     }
     else{
         let count = document.querySelector("tr").childElementCount;
-        let row = document.createElement("TR");
-
+        let row = document.createElement("tr");
+        row.addEventListener("click", changeBackgroundColor);
         for(let i = 0; i <count; i++){
-            let column = document.createElement("TD");
+            let column = document.createElement("td");
+            // column.addEventListener("click", changeBackgroundColor);
             row.appendChild(column);
             document.querySelector("table").appendChild(row);
         }
@@ -23,6 +26,8 @@ function addC(){
     if(list.length === 0){
         let row = document.createElement("TR");
         let column = document.createElement("TD");
+        row.addEventListener("click", changeBackgroundColor);
+        // column.addEventListener("click", changeBackgroundColor);
         row.appendChild(column);
         document.querySelector("table").appendChild(row);
     }
@@ -31,6 +36,7 @@ function addC(){
 
         for(let i = 0; i < count ; i++){
             let column = document.createElement("TD");
+            column.addEventListener("click", changeBackgroundColor);
             document.querySelectorAll("tr")[i].appendChild(column);
         }
     }
@@ -57,5 +63,10 @@ function removeC(){
             }
         } 
     }
+}
+
+function changeBackgroundColor () {
+  let color = document.getElementById('selectedID').value;
+  this.style.backgroundColor = color;
 }
 
