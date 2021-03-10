@@ -78,7 +78,9 @@ function fill() {
 }
 
 //remove all color from the grid
-function clearAll()
-{
-
+function clearAll() {
+  let cells = document.querySelectorAll("td");
+  for (let i = 0; i < cells.length; i++) {
+    cells[i].style.backgroundColor = "white";
+  }
 }
