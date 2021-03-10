@@ -65,3 +65,21 @@ function changeBackgroundColor() {
   this.style.backgroundColor = color;
 }
 
+//fill uncolored grid elements with selected color
+function fillU()
+{
+
+
+}
+
+//fill all grid elements with selected color
+function fill()
+{
+
+}
+
+//remove all color from the grid
+function clearAll()
+{
+
+}
