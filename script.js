@@ -73,7 +73,7 @@ function fill() {
     let cells = document.querySelectorAll("td");
     let color = document.getElementById('selectedID').value;
     for (let i = 0; i < cells.length; i++) {
-        cells[i].style.backgroundColor = color;
+      cells[i].style.backgroundColor = color;
     }
 }
 
