@@ -1,5 +1,16 @@
+body {
+  color: black;
+  font-family: Arial;
+  text-align: center;
+}
+
+h1 {
+    background-image: url("https://st2.depositphotos.com/1052233/11110/v/950/depositphotos_111108532-stock-illustration-abstract-background-of-gray-squares.jpg");
+  }
+
 td{
     height: 50px;
     width: 50px;
     border: 1px solid black;
+    text-align: center;
 }
