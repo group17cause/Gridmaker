@@ -14,7 +14,7 @@ function addR(){
         for(let i = 0; i <count; i++){
             let column = document.createElement("td");
             column.addEventListener("click", changeBackgroundColor);
-            column.style.backgroundColor = "transparent";
+            column.style.backgroundColor = "transparent";       // Default value didn't work so manually assigned transparent to each td
             row.appendChild(column);
             document.querySelector("table").appendChild(row);
         }
@@ -27,7 +27,7 @@ function addC(){
         let row = document.createElement("TR");
         let column = document.createElement("TD");
         column.addEventListener("click", changeBackgroundColor);
-        column.style.backgroundColor = "transparent";
+        column.style.backgroundColor = "transparent"; 
         row.appendChild(column);
         document.querySelector("table").appendChild(row);
     }
@@ -36,7 +36,7 @@ function addC(){
         for(let i = 0; i < count ; i++){
             let column = document.createElement("TD");
             column.addEventListener("click", changeBackgroundColor);
-            column.style.backgroundColor = "transparent";
+            column.style.backgroundColor = "transparent"; 
             document.querySelectorAll("tr")[i].appendChild(column);
         }
     }
