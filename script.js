@@ -4,7 +4,8 @@ function addR(){
         let row = document.createElement("TR");
         let column = document.createElement("TD");
         column.addEventListener("click", changeBackgroundColor);
-        row.appendChild(column);
+        column.style.backgroundColor = "transparent";              // The default value for a table cell is transparent, 
+        row.appendChild(column);                                   // However, the fillU() function did not work without this initial value set to transparent  
         document.querySelector("table").appendChild(row);
     }
     else{ 
@@ -13,6 +14,7 @@ function addR(){
         for(let i = 0; i <count; i++){
             let column = document.createElement("td");
             column.addEventListener("click", changeBackgroundColor);
+            column.style.backgroundColor = "transparent";
             row.appendChild(column);
             document.querySelector("table").appendChild(row);
         }
@@ -25,6 +27,7 @@ function addC(){
         let row = document.createElement("TR");
         let column = document.createElement("TD");
         column.addEventListener("click", changeBackgroundColor);
+        column.style.backgroundColor = "transparent";
         row.appendChild(column);
         document.querySelector("table").appendChild(row);
     }
@@ -33,6 +36,7 @@ function addC(){
         for(let i = 0; i < count ; i++){
             let column = document.createElement("TD");
             column.addEventListener("click", changeBackgroundColor);
+            column.style.backgroundColor = "transparent";
             document.querySelectorAll("tr")[i].appendChild(column);
         }
     }
@@ -64,9 +68,16 @@ function changeBackgroundColor() {
   let color = document.getElementById('selectedID').value;
   this.style.backgroundColor = color;
 }
+
 //fill uncolored grid elements with selected color
 function fillU() {
-
+  let cells = document.querySelectorAll("td");
+  let color = document.getElementById('selectedID').value;
+  for (let i = 0; i < cells.length; i++) {
+    if (cells[i].style.backgroundColor == 'transparent') {
+      cells[i].style.backgroundColor = color;
+    }
+  }
 }
 
 //fill all grid elements with selected color
